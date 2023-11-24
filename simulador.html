@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladotr de prestamos</title>
+    <!-- boxicons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="y-background">
+        <div class="text-center">
+            <h1>Simulador</h1>
+            <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </div>
+        <form class="mx-auto">
+            <fieldset class="form row row-cols-2 rounded-4" >
+                <div class="form-div col text-center mt-4">
+                    <label for="capital" class="form-label fw-medium">¿Cuanto necesitas?</label>
+                </div>
+                <div class="form-div col text-center mt-4">
+                    <label for="cuota" class="form-label fw-medium">¿A cuantas cuotas?</label>
+                </div>
+                <div class="form-div col">
+                    <input type="text" placeholder="Ingrese el monto" class="input form-control rounded-0" id="capital">
+                </div>
+                <div class="form-div col">
+                    <input type="text" placeholder="Ingrese numero de cuotas" class="input form-control rounded-0" id="cuota">
+                </div>
+                <div class="form-div col text-center">
+                    <label for="interes" class="form-label mt-4 fw-medium">¿Porcentaje de interés?</label>
+                    <input type="text" placeholder="Ingrese el interes" class="input form-control rounded-0" id="interes">
+                </div>
+                <div class="form-div container-button">
+                    <button type="button" onclick="calcular()" class="calcular btn btn-warning rounded-pill px-4 py-2 button" id="boton">Calcular</button>
+                </div>
+            </fieldset>
+            <fieldset class="row rounded-4 mt-3">
+                <div class="col text-center my-4">
+                    <h2 class="fs-5 fw-medium cuota-title">La cuota mensual seria de:</h2>
+                    <div">
+                        <p class="fs-1" id="resultado-cuota">$0</p>
+                    </div>
+                </div>
+                <div class="more col-12 text-center">
+                    <i onclick="gen_table()" class='bx bxs-down-arrow-circle fs-2 btn' style='color:#013896'></i>
+                </div>
+            </fieldset>
+        </form> 
+        <table class="tab">
+            <thead>
+                <tr>
+                    <td>NRO</td>
+                    <td>CAPITAL</td>
+                    <td>INTERES</td>
+                    <td>IMPORTE A PAGAR</td>
+                </tr>
+            </thead>
+            <tbody id="tab"></tbody>
+            <tfoot>
+                <tr>
+                    <td class="ft">TOTAL</td>
+                    <td id="t1"></td>
+                    <td id="t2"></td>
+                    <td id="t3"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

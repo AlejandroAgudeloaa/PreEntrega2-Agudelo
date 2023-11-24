@@ -1,0 +1,53 @@
+.x-background{
+    background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0042a9, #3498db);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0042a9, #3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 90.8vh;
+}
+
+.y-background{
+    background: #3873d9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #1146a4, #3873d9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1146a4, #3873d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+}
+
+form{
+    width: 750px;
+}
+
+fieldset{
+    background-color: #fff;
+    padding-bottom: 35px;
+}
+ .input{
+    width: 211px;
+    height: 41px;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+ }
+
+ .input::placeholder{
+    color: #b7b7b7;
+ }
+
+ label{
+    color: #013896;
+    font-size: 17px;
+ }
+
+ .cuota-title{
+    color: #013896;
+ }
+
+ .container-button{
+    position: relative;
+ }
+
+ .button{
+    position: absolute;
+    bottom: 0px;
+    left: 36%;
+ }
+ 
