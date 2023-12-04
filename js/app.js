@@ -2,11 +2,13 @@ function calcular(){
     let n = document.getElementById('capital').value;
     let n2 = document.getElementById('cuota').value;
     let n3 = document.getElementById('interes').value;
+    let arrayDatos = []
 
     if(n>0){
         let monto = n/n2;
         let interes = ((n*n3)/100)/n2;
         let cuota = monto + interes;
+ 
         document.getElementById('resultado-cuota').innerHTML = '$' + cuota;
 
         for(i=1;i<=n2;i++){
@@ -16,6 +18,9 @@ function calcular(){
             d2=i2.toFixed(2);
             r=ca+i2;
             d3=r.toFixed(2);
+            arrayDatos.push(d1)
+            arrayDatos.push(d2)
+            arrayDatos.push(d3)
             document.getElementById("tab").innerHTML=document.getElementById("tab").innerHTML+
                     `<tr>
                         <td> ${i}</td>
@@ -24,18 +29,20 @@ function calcular(){
                         <td> ${d3}</td>
                     </tr>`;
         }
-        n1=n.toFixed(2);
-        t_i=i2*n2;
-        d4=t_i.toFixed(2);
-        t_p=r*n2;
-        d5=t_p.toFixed(2);
-        document.getElementById("t1").innerHTML=n1;
-        document.getElementById("t2").innerHTML=d4;
-        document.getElementById("t3").innerHTML=d5; 
+        // n1=n.toFixed(2);
+        // t_i=i2*n2;
+        // d4=t_i.toFixed(2);
+        // t_p=r*n2;
+        // d5=t_p.toFixed(2);
+        // document.getElementById("t1").innerHTML=n1;
+        // document.getElementById("t2").innerHTML=d4;
+        // document.getElementById("t3").innerHTML=d5; 
     }
 
     else{
         alert('Dato incorrecto')
     }
+
+    console.log(arrayDatos)
 
 }
